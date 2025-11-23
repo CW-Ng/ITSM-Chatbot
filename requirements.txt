@@ -1,3 +1,7 @@
 streamlit
 chromadb
 pysqlite3-binary  # Required for ChromaDB on Streamlit Cloud due to SQLite version
+langchain
+tiktoken  # Often used by LangChain for token counting
+openai  # If using OpenAI models with LangChain
+python-dotenv  # For managing environment variables, e.g., API keys
