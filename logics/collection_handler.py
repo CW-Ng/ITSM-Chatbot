@@ -82,7 +82,7 @@ Here are some issue-resolution pairs:
 
 {context}
 
-Answer the user's question using ONLY the information above.
+Answer the user's question using ONLY the information above. Answer in bullet form where possible
 If the answer is not found in the data, say "I don't know based on the stored issues but these are the possible resolution from the internet" and propose generic answer
 
 User question:
@@ -91,7 +91,7 @@ User question:
         response = llm.chat.completions.create(
             model="gpt-4.1-mini",
             messages=[{"role": "user", "content": prompt}],
-            temperature=0
+            temperature=0.4
         )
         
         answer = response.choices[0].message.content
