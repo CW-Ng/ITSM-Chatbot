@@ -18,7 +18,7 @@ collection_path = "itsm_issues_db"
 
 #client = chromadb.PersistentClient(path=collection_path)
 #client = chromadb.EphemeralClient()
-collection = client.get_or_create_collection(name="issues_collection")
+#collection = client.get_or_create_collection(name="issues_collection")
 
 # ---------------------------
 # Embeddings & LLM
