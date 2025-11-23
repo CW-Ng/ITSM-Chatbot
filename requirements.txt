@@ -1,0 +1,3 @@
+streamlit
+chromadb
+pysqlite3-binary  # Required for ChromaDB on Streamlit Cloud due to SQLite version
