@@ -17,8 +17,8 @@ collection_path = "itsm_issues_db"
 # Data will be stored in ./{collection_path}
 
 #client = chromadb.PersistentClient(path=collection_path)
-#client = chromadb.EphemeralClient()
-#collection = client.get_or_create_collection(name="issues_collection")
+client = chromadb.EphemeralClient()
+collection = client.get_or_create_collection(name="issues_collection")
 
 # ---------------------------
 # Embeddings & LLM
