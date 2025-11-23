@@ -1,10 +1,17 @@
 import streamlit as st
 import pandas as pd
+import tempfile
+
+# Setup ephemeral database once per session
+if "chroma_dir" not in st.session_state:
+    st.session_state.chroma_dir = tempfile.mkdtemp()
+
 from logics.collection_handler import viewAllIssues, addMultipleIssues,queryCollection,addIssue
 
 # ---------------------------
 # Streamlit UI
 # ---------------------------
+
 
 # region <--------- Streamlit App Configuration --------->
 st.set_page_config(
