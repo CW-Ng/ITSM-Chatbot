@@ -9,7 +9,6 @@ from openai import OpenAI
 
 load_dotenv('.env')
 
-collection_path = "itsm_issues_db"
 
 # ---------------------------
 # Initialize Persistent Chroma DB
@@ -26,6 +25,11 @@ collection = client.get_or_create_collection(name="issues_collection")
 emb = OpenAIEmbeddings(model="text-embedding-3-small")
 llm = OpenAI()
 
+
+def initCollection(df_InitIssues):
+    if len(collection.get()["ids"]) == 0:
+        addMultipleIssues(df_InitIssues)
+    
 
 def viewAllIssues():
     data = collection.get()

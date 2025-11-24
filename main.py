@@ -6,7 +6,10 @@ import tempfile
 if "chroma_dir" not in st.session_state:
     st.session_state.chroma_dir = tempfile.mkdtemp()
 
-from logics.collection_handler import viewAllIssues, addMultipleIssues,queryCollection,addIssue
+from logics.collection_handler import viewAllIssues, addMultipleIssues,queryCollection,addIssue,initCollection
+
+load_csv = "./data/IT_Issues_50_1stLoad.csv"
+
 
 # ---------------------------
 # Streamlit UI
@@ -183,6 +186,7 @@ if "logged_in" not in st.session_state:
     st.session_state.logged_in = False
 
 if st.session_state.logged_in:
+    initCollection(pd.read_csv(load_csv))
     home_page()
 else:
     login_page()
