@@ -1,0 +1,51 @@
+issue,resolution
+PC does not power up,Test with another power socket and verify PSU switch is on.
+Wi-Fi connection keeps dropping,Reset network adapter and update Wi-Fi drivers.
+Internet feels unusually slow,Run a speed test and reboot both router and modem.
+Email stops updating on device,Remove the email account and add it again with updated settings.
+Printer refuses to print documents,Clear the print queue and reinstall the print service.
+PC shows unexpected blue screen,Run Windows Memory Diagnostic and check recent driver changes.
+App frequently freezes,Clear application temp files and reset app configuration.
+User forgot login credentials,Use self‑service password portal or admin-assisted reset.
+Files open with wrong program,Update default program associations for the file type.
+Cannot reach shared network folder,Reconnect network profile and check domain login status.
+USB drive intermittently detected,Disable USB selective suspend in power settings.
+Sound output missing,Restart Windows Audio service and reinstall sound drivers.
+Display shows no signal,Reconnect cables and test with another monitor port.
+Keyboard keys not responding properly,Clean keyboard and reinstall keyboard drivers.
+Mouse cursor jumps randomly,Disable pointer precision and check for surface issues.
+Program installation stuck,Run installer as administrator and ensure disk has enough space.
+VPN connects but no internet,Disable IPv6 and adjust DNS settings to 8.8.8.8.
+Mobile hotspot disconnecting,Reset network settings on both host and connected device.
+User deleted important folders accidentally,Recover files using previous version restore.
+Browser loads pages slowly,Disable hardware acceleration and reset browser settings.
+Cannot convert document to PDF,Use built‑in print-to-PDF or a dedicated converter tool.
+PC startup feels slower than usual,Check startup apps and run disk cleanup.
+Application shows license invalid,Re‑activate using updated license file or server sync.
+Laptop camera not functioning,Enable camera from device security settings.
+Bluetooth device connects but no audio,Set the device as default communication output.
+Outgoing emails stuck in outbox,Revalidate SMTP authentication and clear outbox.
+Random ads appearing in browser,Uninstall suspicious apps and reset DNS to default.
+Low disk space warning,Run storage analyzer and remove large unused files.
+Windows update stuck at certain percentage,Run Windows Update Troubleshooter and clear update cache.
+Cloud sync shows conflicting copies,Merge file versions manually and force sync refresh.
+Application freezing periodically,Increase virtual memory and close unused apps.
+VPN resources inaccessible,Request updated VPN profile from IT admin.
+2FA code delayed,Switch to authenticator app instead of SMS.
+Server returning 500 error,Check application service status and restart backend processes.
+Database timeout issue,Increase connection timeout and test DB health.
+Users getting logged out too quickly,Update session policy in identity provider.
+CPU usage spikes randomly,Scan for malware and update background services.
+Large files copy slowly,Disable SMB signing temporarily for performance testing.
+Permission denied on web resource,Ensure correct role assignment and refresh token.
+Screen brightness flickering,Disable adaptive brightness and update GPU drivers.
+File shows unreadable or corrupted,Use file recovery software and restore previous version.
+Cannot adjust monitor resolution,Reinstall display adapter from Device Manager.
+Cloud sync client won’t start,Delete cache directories and reinstall client app.
+Printer frequently shows offline,Assign static IP to printer and reconnect.
+Network path not reconnecting on login,Add batch script to map drives automatically.
+Email attachments fail to upload,Reduce file size or upload through OneDrive/SharePoint.
+Calendar events not updating,Force Outlook profile repair.
+Authentication keeps failing in app,Reset security tokens and verify MFA setup.
+Laptop battery drains faster than usual,Run battery calibration and disable background syncing.
+Clock keeps desynchronizing,Sync with corporate NTP server and disable manual edits.

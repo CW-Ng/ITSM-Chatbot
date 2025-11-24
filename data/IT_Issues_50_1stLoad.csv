@@ -1,0 +1,51 @@
+issue,resolution
+Computer won't power on,Ensure power cable is secure and test with another adapter.
+Cannot connect to Wi-Fi,Restart router and reconnect to the network.
+Slow internet speed,Restart modem and close heavy network applications.
+Email not syncing,Re-add account and verify sync settings.
+Printer not printing,Check drivers and ensure printer is online.
+Blue screen error,Update drivers and remove faulty hardware.
+App keeps crashing,Reinstall the app and update OS.
+Forgot Windows password,Use password reset tool or admin account.
+File won’t open,Check file compatibility and required software.
+Cannot access network drive,Verify permissions and network status.
+External drive not detected,Try different USB ports and update drivers.
+Audio not working,Check output device and reinstall drivers.
+Monitor not displaying,Check cable and select correct input.
+Keyboard not working,Reconnect keyboard or replace batteries.
+Mouse lagging,Reset connection or change USB port.
+Software won’t install,Check permissions and disable antivirus temporarily.
+VPN not connecting,Restart client and try alternate server.
+Hotspot not working,Restart device and reset hotspot settings.
+Accidentally deleted files,Recover from Recycle Bin or restore backup.
+Browser keeps crashing,Clear cache and remove extensions.
+Cannot print to PDF,Reinstall PDF print driver.
+Computer slow to boot,Disable startup apps and check disk.
+Software license expired,Renew or re-activate license key.
+Camera not working,Check privacy options and reinstall driver.
+Bluetooth pairing fails,Remove and re-add device.
+Cannot send email,Check SMTP settings and server status.
+Pop‑up ads appearing,Run malware scan and reset browser.
+Disk space full,Remove temp files and uninstall unused apps.
+System update failed,Retry update after reboot.
+File sync conflicts,Resolve duplicates and sync again.
+Program not responding,Force close and relaunch.
+Cannot access VPN resources,Validate DNS and split tunneling settings.
+2FA not received,Check delivery method and update contact info.
+Internal server error,Restart service and verify logs.
+Database connection error,Check connection string and credentials.
+User session timeout issues,Increase session timeout period.
+High CPU usage,Check Task Manager for runaway processes.
+Slow file transfers,Use wired connection for better speed.
+403 forbidden error,Update permissions or whitelist user.
+Screen flickering,Update display drivers and adjust refresh rate.
+Document corrupted,Restore previous version or use repair tools.
+Cannot change screen resolution,Reinstall GPU drivers.
+Sync client not launching,Reinstall and clear cache folder.
+Printer offline,Restart spooler service and reconnect printer.
+Network drive not auto‑mapping,Enable reconnect at logon and verify creds.
+Email attachments blocked,Use secure file transfer or compress file.
+Shared calendar not accessible,Update calendar permissions.
+Authentication error,Reset password and re-login.
+Battery drains quickly,Reduce brightness and replace aging battery.
+Incorrect system time,Sync with NTP server and update timezone.
