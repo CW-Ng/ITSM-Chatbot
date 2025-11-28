@@ -122,7 +122,7 @@ def viewAll_page():
 
 
 # ---------------------------
-# 4. LLM-based Q&A (RAG)
+# Query page
 # ---------------------------
 def askQns_page():
     st.subheader("Tell me about your issue")
@@ -137,6 +137,71 @@ def askQns_page():
             st.write("### 📚 Context Used")
             for doc, meta in zip(results["documents"][0], results["metadatas"][0]):
                 st.write(f"- `{doc}`")
+
+# ---------------------------
+# About Us page
+# ---------------------------
+def abtUs_page():
+    st.subheader("About Us")
+    
+    with st.expander("Project scope",True):
+        st.write("This project involves developing and deploying an intelligent ITSM chatbot powered by Retrieval-Augmented Generation (RAG) technology. The RAG bot will leverage historical ticket data to provide accurate, contextually relevant responses to user query.")
+    with st.expander("Objectives",True):
+        st.write("The primary objective is to create an AI-powered RAG system that can intelligently search through vector database to provide precise answers to user queries. The bot will leverage on the power of large language models to ensure responses are accurate.")
+    with st.expander("Data sources",True):
+        st.write("For this PoC purpose, 50 common IT issue and their resolution was generated and imported into the database on first load.")
+    with st.expander("Features",True):
+        st.write("1. In the event where the Bot is unable to find suitable historical ticket in relation to the user query, the bot will leverage the power of LLM to provide recommended solution.")
+        st.write("2. Admin will have the flexibility to bulk import a list of historical ticket data into the database or to insert single records")
+
+        
+
+# ---------------------------
+# Methodology page
+# ---------------------------
+def showMethodology_page():
+    st.subheader("Methodology")
+    # Create some sample data
+    load_data = {
+        'Steps': ['1. Gather Resolved Tickets', '2. Convert to Code', '3. Store & Index'],
+        'Action': ['Either export all resolved tickets into CSV file or enter manually using [Add new ITSM issue with resolution]', 'Create embeddings.', 'Store the vectors in a database.'],
+        'Explaination': [
+            'Provide data by either exporting resolved tickets into CSV file or manually entering each solution', 
+            'Use the Embedding Model to generate a numerical vector for each "Issue" and "Resolution" text pair.', 
+            'Load the numerical vectors into a Vector Database designed for high-speed similarity search, enabling instant matching of new questions to historical solutions.']
+    }
+
+    rag_data = {
+        'Steps': ['1. New Query', '2. Instant Search', '3. Retrieve Context', '4. Generate Answer','5. Response to user'],
+        'Action': ['An user submits asks a question.', 'Convert the query and search the index.', 'Select the best matches.','Prompt the LLM with context.','The LLM generates the final output.'],
+        'Explaination': [
+            'User input a query in the system', 
+            'The system converts the query into a numerical vector. It then searches the Vector Database', 
+            'The system finds the top 5 past tickets where it matches query', 
+            'Using the top 5 tickets as context, the system will prompt the LLM for response', 
+            'The system display the response from the LLM as well as the context (top 5 past tickets)']
+    }
+
+    df_load_data = pd.DataFrame(load_data)
+    df_rag_data = pd.DataFrame(rag_data)
+    with st.expander("Loading of data",False):
+        st.write("When the application first start, a basic set of resolved tickets will automatically load into a temporary database.")
+        st.write("Users can look at the existing data and search the knowledge base, but they cannot add any new records (tickets or solutions).")
+        st.write("Admins are the only ones who can add new solutions. They have two ways to do this:")
+        st.write("1. Use the [Add new ITSM issue with resolution] function to manually input a solution.")
+        st.write("2. Upload a CSV file that contains only two columns: ""Issue"" and the corresponding ""Resolution"".")
+        st.dataframe(df_load_data, hide_index=True)
+    
+    with st.expander("Query",False):
+        st.write("User will enter their question in the system")
+        st.write("The system will searches through the vector database to find top 5 tickets that resemble the question the most")
+        st.write("Using the top 5 tickets as context, the system will craft the response back to the user")
+        st.dataframe(df_rag_data, hide_index=True)
+    with st.expander("Flow Chart",False):
+        st.write("Process flow for application use cases")
+        st.image('./images/FlowChart.png', caption='Flow Chart', width=760)
+    
+ 
 
 # -----------------------------
 # HOME PAGE
@@ -161,7 +226,8 @@ def home_page():
     if st.session_state.role == "admin":
         pages.append("Add new ITSM issue with resolution")
         pages.append("Upload CSV")
-        
+    pages.append("Methodology")
+    pages.append("About Us")    
     page = st.sidebar.radio("Go to page:", pages)
 
     # Page content
@@ -173,6 +239,11 @@ def home_page():
         addIssue_page()
     elif page == "Upload CSV":
         uploadCSV_page()
+    elif page == "About Us":
+        abtUs_page()
+    elif page == "Methodology":
+        showMethodology_page()
+    
 
 
 # ---------------------------

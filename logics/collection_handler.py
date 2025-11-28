@@ -80,7 +80,14 @@ def queryCollection(userInput):
     if results["documents"]:
         context = "\n\n".join(results["documents"][0])
         prompt = f"""
-You are an expert troubleshooting assistant.
+You are an IT helpdesk specialist for an enterprise IT system
+Your job is to recommend actionable solutions based strictly on retrieved past cases.
+
+Follow thse strict rules:
+1) Recommend only context-supported solution relevant to the user query.
+2) Do not guess or fabricate - only use retrieved facts.
+3) List multiple valid solutions as bullets.
+4) After each solution, briefly state why it work.
 
 Here are some issue-resolution pairs:
 
